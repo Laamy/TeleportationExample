@@ -46,13 +46,13 @@ namespace BasicTeleportationUsage
             // the reason its like this is because its the A-A-B-B(Axis-Aligned Bounding Box)
             // used for minecraft collision detection, so you can use this for phase and noclip aswell!
 
-            MCM.writeFloat(localPlayer + GameOffsets.positionOffset, advancedAxis.x.x); // Lower X Postion
-            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 4, advancedAxis.x.y); // Lower Y Postion
-            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 8, advancedAxis.x.z); // Lower Z Postion
+            MCM.writeFloat(localPlayer + GameOffsets.positionOffset, advancedAxis.lower.x); // Lower X Postion
+            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 4, advancedAxis.lower.y); // Lower Y Postion
+            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 8, advancedAxis.lower.z); // Lower Z Postion
 
-            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 12, advancedAxis.y.x); // Upper X Postion
-            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 16, advancedAxis.y.y); // Upper Y Postion
-            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 20, advancedAxis.y.z); // Upper Z Postion
+            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 12, advancedAxis.upper.x); // Upper X Postion
+            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 16, advancedAxis.upper.y); // Upper Y Postion
+            MCM.writeFloat(localPlayer + GameOffsets.positionOffset + 20, advancedAxis.upper.z); // Upper Z Postion
         } // Teleportation
 
         public static void teleport(float x, float y, float z) => teleport(new AABB(new Vector3(x, y, z), new Vector3(x + .6f, y + 1.8f, z + .6f))); // Teleportation

@@ -64,13 +64,13 @@ namespace BasicTeleportationUsage // Yaamis vector utils v3
 
     public struct AABB
     {
-        public Vector3 x;
-        public Vector3 y;
+        public Vector3 lower;
+        public Vector3 upper;
 
-        public AABB(Vector3 x, Vector3 y)
+        public AABB(Vector3 lower, Vector3 upper)
         {
-            this.x = x;
-            this.y = y;
+            this.lower = lower;
+            this.upper = upper;
         }
     }
 }
